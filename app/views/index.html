@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>index</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.9/angular-route.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+ crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="bootstrap.min.css">
+<script src="bootstrap.min.js"></script>
+
+
+<script type="text/javascript">
+var app=angular.module('myApp',['ngRoute']);
+app.config(function($routeProvider){
+	
+		$routeProvider
+		.when('/',{templateUrl:"login.html"})
+		$routeProvider
+		.when('/home',{templateUrl:"userList.html"})
+		$routeProvider
+		.when('/add-user',{templateUrl:"AddUser.html"})
+		
+		
+	});
+
+</script>
+<script src="login.js"	></script>
+<script src= "myUsers.js"></script>
+
+
+</head>
+
+<body ng-app="myApp">
+	<div ng-view=""></div>
+	</body>
+</html>
